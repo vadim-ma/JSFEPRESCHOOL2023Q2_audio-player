@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-size: 12px;
+    display: flex;
+    flex: 0 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.player {
+    width: 300px;
+    background: linear-gradient(to bottom right, #b968c5, skyblue);
+}
+.player__background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(../images/cover/Blondie-Call_Me.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.player__cover {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.player__dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 3em;
+}
+.player__dashboard>*{
+    height: 100%;
+}
+.player__dashboard-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.player__dashboard-top>*{
+    height: 100%;
+}
+.player__track-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+.player__track-info_artist{
+    color: var(--mark-color);
+}
+
+.player__move-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.player__timeline{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 2em;
+    font-size: 0.7em;
+}
+.player__track-time{
+    align-self: flex-end;
+    color: var(--mark-color);
+}
+
+.player__button {
+    font-size: inherit;
+    appearance: none;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;
+    height: 2em;
+    transition: all 0.4s;
+}
+.player__button:hover{
+    filter: invert(1);
+}
+.player__button_start{
+    height: 3em;
+}
+.player__button img{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.player__footer {
+    padding: 1em;
+    display: flex;
+    height: 3.5em;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 0.5em;
+    font-size: 0.7em;
+}
+
+.player__footer>* {
+    height: 100%;
+}
+
+.player__author {
+    display: flex;
+    justify-self: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.player__author>* {
+    height: 100%;
+}
